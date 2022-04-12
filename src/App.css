@@ -1,38 +1,128 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Gravitas+One&family=Rubik+Mono+One&display=swap');
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 0.75em;
   text-align: center;
+  font-family: 'Rubik Mono One', sans-serif;
+  text-shadow: 0 2px 1px #79a06d, 
+      -1px 3px 1px #82ad75, 
+      -2px 5px 1px #8ebf80;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+hr {
+	border-top-width: 2px;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+	width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  
+  background-image:
+  radial-gradient(at 91% 21%, hsla(28,78%,61%,1) 0px, transparent 50%),
+  radial-gradient(at 20% 2%, hsla(156,78%,69%,1) 0px, transparent 50%),
+  radial-gradient(at 16% 95%, hsla(360,91%,72%,1) 0px, transparent 50%),
+  radial-gradient(at 15% 22%, hsla(156,65%,76%,1) 0px, transparent 50%),
+  radial-gradient(at 58% 70%, hsla(138,65%,62%,1) 0px, transparent 50%),
+  radial-gradient(at 21% 62%, hsla(190,66%,78%,1) 0px, transparent 50%),
+  radial-gradient(at 92% 58%, hsla(56,83%,63%,1) 0px, transparent 50%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+#app {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.validation-error {
+	min-height: 1.5em;
+}
+
+.todolist .done .todo-title {
+	font-style: italic;
+	color: var(--bs-success);
+	text-decoration: line-through;
+  font-size: large;
+}
+
+.todolist .done {
+  opacity: 0.5;
+}
+
+
+.todolist .todo-delete {
+	cursor: pointer;
+	margin-left: 0.5em;
+  padding: 0.5rem;
+}
+
+.list-group-item {
+  display: flex !important;
+  justify-content: space-between !important;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-family: 'Fredoka', sans-serif;
+}
+
+.list-group-item:hover {
+  transform: scale(1.01);
+}
+
+
+.status {
+	font-style: italic;
+  font-weight: lighter;
+  text-align: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.bold {
+  font-weight: bold !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.container {
+  width: 80vw;
+  color: white;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-grad {
+  background-image: linear-gradient(to right, #FF5F6D 0%, #FFC371  51%, #FF5F6D  100%);
+}
+
+
+.btn-grad {
+   text-align: center;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   display: block;
+   border: none;
+   font-family: 'Fredoka', sans-serif;
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+
+@media screen and (min-width: 800px) {
+  .container {
+    max-width: 40%;
   }
 }
+
+
+
